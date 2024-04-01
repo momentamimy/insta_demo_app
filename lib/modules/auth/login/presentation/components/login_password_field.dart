@@ -1,14 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:insta_demo_app/core/theme/colors.dart';
-import 'package:insta_demo_app/widgets/auth_text_field_widget.dart';
+part of '../screen/login_screen.dart';
 
-class LoginPasswordField extends StatelessWidget {
-  const LoginPasswordField({super.key});
+class _LoginPasswordField extends StatelessWidget {
+  const _LoginPasswordField();
 
   @override
   Widget build(BuildContext context) {
     return AuthTextFieldWidget(
+      controller: context.read<LoginBloc>().passwordController,
       prefix: const Icon(Icons.lock, color: C.secondaryColor),
       hintText: tr("password"),
       textInputAction:

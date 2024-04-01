@@ -1,16 +1,12 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:insta_demo_app/core/helper/utils.dart';
-import 'package:insta_demo_app/core/theme/colors.dart';
-import 'package:insta_demo_app/widgets/auth_text_field_widget.dart';
+part of '../screen/login_screen.dart';
 
-class LoginEmailField extends StatelessWidget {
-  const LoginEmailField({super.key});
+class _LoginEmailField extends StatelessWidget {
+  const _LoginEmailField();
 
   @override
   Widget build(BuildContext context) {
     return AuthTextFieldWidget(
+      controller: context.read<LoginBloc>().emailController,
       keyboardType: TextInputType.emailAddress,
       inputFormatters: [
         FilteringTextInputFormatter.deny(RegExp(" "))

@@ -1,12 +1,7 @@
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:insta_demo_app/core/helper/utils.dart';
-import 'package:insta_demo_app/core/theme/colors.dart';
-import 'package:insta_demo_app/widgets/auth_text_field_widget.dart';
+part of '../screen/signup_screen.dart';
 
-class SignupUsernameField extends StatelessWidget {
-  const SignupUsernameField({super.key});
+class _SignupUsernameField extends StatelessWidget {
+  const _SignupUsernameField({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:insta_demo_app/core/screen_utils/values_manger.dart';
+part of '../screen/signup_screen.dart';
 
-class SignupImagePicker extends StatelessWidget {
-  const SignupImagePicker({super.key});
+class _SignupImagePicker extends StatelessWidget {
+  const _SignupImagePicker({super.key});
 
   @override
   Widget build(BuildContext context) {
