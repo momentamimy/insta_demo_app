@@ -1,7 +1,7 @@
 part of '../screen/signup_screen.dart';
 
 class _SignupUsernameField extends StatelessWidget {
-  const _SignupUsernameField({super.key});
+  const _SignupUsernameField();
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +12,7 @@ class _SignupUsernameField extends StatelessWidget {
         FilteringTextInputFormatter.allow(RegExp(Utils.userNamePattern))
       ],
       prefix: const Icon(Icons.person, color: C.secondaryColor),
+      controller: context.read<SignupBloc>().nameController,
       hintText: tr("name"),
       validate: (value) {
         if (value!.isNotEmpty) {

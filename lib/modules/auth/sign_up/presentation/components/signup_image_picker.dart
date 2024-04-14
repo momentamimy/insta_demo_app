@@ -1,7 +1,7 @@
 part of '../screen/signup_screen.dart';
 
 class _SignupImagePicker extends StatelessWidget {
-  const _SignupImagePicker({super.key});
+  const _SignupImagePicker();
 
   @override
   Widget build(BuildContext context) {

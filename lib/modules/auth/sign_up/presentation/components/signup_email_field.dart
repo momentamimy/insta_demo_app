@@ -2,7 +2,7 @@ part of '../screen/signup_screen.dart';
 
 
 class _SignupEmailField extends StatelessWidget {
-  const _SignupEmailField({super.key});
+  const _SignupEmailField();
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +11,7 @@ class _SignupEmailField extends StatelessWidget {
       inputFormatters: [
         FilteringTextInputFormatter.deny(RegExp(" "))
       ],
+      controller: context.read<SignupBloc>().emailController,
       prefix: const Icon(Icons.mail_rounded, color: C.secondaryColor),
       textInputAction: TextInputAction.next,
       hintText: tr("email"),

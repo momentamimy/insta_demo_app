@@ -43,12 +43,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       emit(LoginSuccess(user: userCredential));
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
-        case 'user-not-found':
-          emit(LoginFailed(errorMessage: 'No user found for that email.'));
-          break;
-        case 'wrong-password':
-          emit(LoginFailed(
-              errorMessage: 'Wrong password provided for that user.'));
+        case 'invalid-credential':
+          emit(LoginFailed(errorMessage: 'wrong email or password.'));
           break;
         case 'network-request-failed':
           emit(LoginFailed(

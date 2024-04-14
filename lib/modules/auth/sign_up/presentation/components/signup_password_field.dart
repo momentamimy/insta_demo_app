@@ -1,13 +1,14 @@
 part of '../screen/signup_screen.dart';
 
 class _SignupPasswordField extends StatelessWidget {
-  const _SignupPasswordField({super.key});
+  const _SignupPasswordField();
 
   @override
   Widget build(BuildContext context) {
     return AuthTextFieldWidget(
       prefix: const Icon(Icons.lock, color: C.secondaryColor),
       hintText: tr("password"),
+      controller: context.read<SignupBloc>().passwordController,
       textInputAction:
       TextInputAction.next,
       obscureText: true,
